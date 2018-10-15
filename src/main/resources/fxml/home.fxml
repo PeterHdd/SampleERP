@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+   <top>
+      <MenuBar fx:id="menuBar" prefHeight="22.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Tabs">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#usersAddition" text="Users" />
+                  <MenuItem mnemonicParsing="false" onAction="#businessPartnerAddition" text="Business Partner" />
+                  <MenuItem mnemonicParsing="false" onAction="#productAddition" text="Products" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="about" mnemonicParsing="false" onAction="#onAboutClick" text="About" />
+            </items>
+          </Menu>
+          <Menu fx:id="name" mnemonicParsing="false">
+               <items>
+                  <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#onLogout" text="Logout" />
+               </items></Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Label fx:id="welcomeText" text="Welcome to ERP" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+   </center>
+   <bottom>
+      <WebView fx:id="webView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="200.0" BorderPane.alignment="BOTTOM_CENTER" />
+   </bottom>
+</BorderPane>
